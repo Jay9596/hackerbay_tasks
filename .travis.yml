@@ -16,8 +16,8 @@ env:
   - TEST_DIR=task_1
   - TEST_DIR=task_2
   global:
-  - PGPORT=5433
-  - CODECOV_TOKEN="fe328c6a-8a8d-4f41-9936-793d08b8666c"
+    - PGPORT=5433
+    - CODECOV_TOKEN="fe328c6a-8a8d-4f41-9936-793d08b8666c"
  
 script:
   - cd $TEST_DIR && npm install && npm test
