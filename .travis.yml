@@ -3,6 +3,9 @@ language: node_js
 node_js:
   - "node"
 
+install:
+  - npm install -g codecov
+
 services:
   - postgresql
 
@@ -14,4 +17,8 @@ env:
   - TEST_DIR=task_2
   global:
   - PGPORT=5433
-script: cd $TEST_DIR && npm install && npm test
+  - CODECOV_TOKEN="fe328c6a-8a8d-4f41-9936-793d08b8666c"
+ 
+script:
+  - cd $TEST_DIR && npm install && npm test
+  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec && codecov
