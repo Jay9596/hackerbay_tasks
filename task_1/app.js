@@ -23,7 +23,7 @@ app.get("/data", (req, res) => {
   if (data != undefined || data != null) {
     res.status(200).json({ data });
   } else {
-    res.sendStatus(404);    // Send 404, if data is not present
+    res.sendStatus(404); // Send 404, if data is not present
   }
   res.end();
 });
@@ -36,3 +36,4 @@ app.listen(PORT, err => {
   console.log("Server started on " + PORT);
 });
 
+module.exports = app;
