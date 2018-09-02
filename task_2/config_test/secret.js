@@ -1,4 +1,4 @@
 module.exports = {
-    secretKey: 'Your_Secret_Key'
+    secretKey: 'HackerBay'
     // and any other secret
 }
