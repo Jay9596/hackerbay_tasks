@@ -2,7 +2,7 @@ var router = require("express").Router();
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 var User = require("../model/user");
-var secretKey = require("../config/secret").secretKey;
+var secretKey = require("../config_test/secret").secretKey;
 
 router.post("/signup", (req, res) => {
   if (!req.body.email || !req.body.password) {
