@@ -1,4 +1,4 @@
-const config = require("../config/postgre_config");
+const config = require("../config_test/postgre_config");  // change in production
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(config.database, config.user, config.password, {
