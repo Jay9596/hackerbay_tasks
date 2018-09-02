@@ -36,7 +36,7 @@ router.post("/login", (req, res) => {
         if (bcrypt.compareSync(req.body.password, values.password)) {
           res.status(200).send(jwt.sign(values.id, secretKey));
         } else {
-          res.status(400).json({ error: "Invlaid Password" });
+          res.status(400).json({ error: "Invalid Password" });
         }
       }
     })

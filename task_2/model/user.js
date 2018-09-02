@@ -23,21 +23,11 @@ const UserModel = sequelize.define(
   }
 );
 
-// Testing connection
-// sequelize
-//   .authenticate()
-//   .then(() => {
-//     console.log("Connection has been established successfully.");
-//   })
-//   .catch(err => {
-//     console.error("Unable to connect to the database:", err);
-//   });
-
 // Testing
-function restart() {
-  sequelize.sync({ force: true }).catch(err => {
-    console.log("Sync Error" + err);
-  });
-}
-restart();
+// function restart() {
+//   sequelize.sync({ force: true }).catch(err => {
+//     console.log("Sync Error" + err);
+//   });
+// }
+// restart();
 module.exports = UserModel;

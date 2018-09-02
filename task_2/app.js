@@ -19,6 +19,7 @@ app.listen(PORT, err => {
   if (err) {
     throw err;
   }
+  console.log("Server started on " + PORT);
 });
 
-console.log("Server started on " + PORT);
+module.exports = app;
